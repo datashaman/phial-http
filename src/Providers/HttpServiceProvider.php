@@ -26,8 +26,10 @@ class HttpServiceProvider implements ServiceProviderInterface
         return [
             Dispatcher::class => fn(ContainerInterface $container) =>
                 simpleDispatcher(
-                    function (RouteCollector $r) {
-                        require base_dir('routes/web.php');
+                    function (RouteCollector $r) use ($container) {
+                        foreach ($container->get('route.files') as $file) {
+                            require $file;
+                        }
                     }
                 ),
             ExceptionMiddleware::class => fn(ContainerInterface $container)  =>
