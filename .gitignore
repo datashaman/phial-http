@@ -1,6 +1,3 @@
-/.aws-sam/
 /composer.lock
-/.env
-/samconfig.toml
 /tags
 /vendor/
