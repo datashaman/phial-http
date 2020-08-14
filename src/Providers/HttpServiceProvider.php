@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Providers;
 
-use Datashaman\Phial\Http\Listeners\SetRequestAndContext;
 use Datashaman\Phial\Http\Middleware\ExceptionMiddleware;
 use Datashaman\Phial\Http\Middleware\RouteMiddleware;
 use Datashaman\Phial\Http\Middleware\FallbackMiddleware;
