@@ -9,6 +9,7 @@ use Datashaman\Phial\Http\Middleware\ExceptionMiddleware;
 use Datashaman\Phial\Http\Middleware\RouteMiddleware;
 use Datashaman\Phial\Http\Middleware\FallbackMiddleware;
 use Datashaman\Phial\Http\Events\RequestEvent;
+use Datashaman\Phial\Http\Factories\RequestHandlerFactory;
 use Datashaman\Phial\Http\Factories\RequestHandlerFactoryInterface;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
@@ -16,6 +17,8 @@ use Interop\Container\ServiceProviderInterface;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;
 use Psr\Log\LoggerInterface;
+
+use function FastRoute\simpleDispatcher;
 
 class HttpServiceProvider implements ServiceProviderInterface
 {
@@ -43,12 +46,6 @@ class HttpServiceProvider implements ServiceProviderInterface
 
     public function getExtensions()
     {
-        return [
-            ListenerProviderInterface::class => function (ContainerInterface $container, $provider) {
-                $provider->addService(RequestEvent::class, SetRequestAndContext::class);
-
-                return $provider;
-            },
-        ];
+        return [];
     }
 }

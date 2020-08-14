@@ -14,14 +14,14 @@ use Psr\Log\LoggerInterface;
 
 class Adapter
 {
-    private RequestHandlerFactoryInterface $requestHandlerFactory;
+    private Factories\RequestHandlerFactoryInterface $requestHandlerFactory;
     private EventDispatcherInterface $eventDispatcher;
     private LoggerInterface $logger;
 
     private Psr17Factory $factory;
 
     public function __construct(
-        RequestHandlerFactoryInterface $requestHandlerFactory,
+        Factories\RequestHandlerFactoryInterface $requestHandlerFactory,
         EventDispatcherInterface $eventDispatcher,
         LoggerInterface $logger
     ) {
