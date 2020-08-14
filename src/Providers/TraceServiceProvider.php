@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Providers;
 
-use App\Listeners\TraceBegin;
-use App\Listeners\TraceEnd;
 use Datashaman\Phial\Http\Events\RequestEvent;
 use Datashaman\Phial\Http\Events\ResponseEvent;
+use Datashaman\Phial\Http\Listeners\TraceBegin;
+use Datashaman\Phial\Http\Listeners\TraceEnd;
 use Interop\Container\ServiceProviderInterface;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Middleware;
 
-use App\Exceptions\HttpException;
+use Datashaman\Phial\Http\Exceptions\HttpException;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

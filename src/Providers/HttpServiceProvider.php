@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Providers;
 
-use App\Http\Middleware\ExceptionMiddleware;
-use App\Http\Middleware\RouteMiddleware;
-use App\Http\Middleware\FallbackMiddleware;
-use App\Http\RequestHandlers\RequestHandlerFactory;
-use App\Listeners\SetRequestAndContext;
+use Datashaman\Phial\Http\Listeners\SetRequestAndContext;
+use Datashaman\Phial\Http\Middleware\ExceptionMiddleware;
+use Datashaman\Phial\Http\Middleware\RouteMiddleware;
+use Datashaman\Phial\Http\Middleware\FallbackMiddleware;
 use Datashaman\Phial\Http\Events\RequestEvent;
-use Datashaman\Phial\Http\RequestHandlerFactoryInterface;
+use Datashaman\Phial\Http\Factories\RequestHandlerFactoryInterface;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use Interop\Container\ServiceProviderInterface;

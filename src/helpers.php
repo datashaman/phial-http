@@ -10,7 +10,7 @@ if (!function_exists('abort')) {
         array $headers = [],
         ?Throwable $previous = null
     ): void {
-        throw App\Exceptions\HttpException::create(
+        throw Datashaman\Phial\Http\Exceptions\HttpException::create(
             $message,
             $code,
             $previous,

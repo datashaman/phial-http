@@ -13,11 +13,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     );
 
     $parameters->set('paths', [
-        __DIR__ . '/app',
-        __DIR__ . '/bootstrap.php',
-        __DIR__ . '/build.php',
+        __DIR__ . '/src',
         __DIR__ . '/config',
-        __DIR__ . '/routes',
     ]);
 
     $parameters->set('sets', ['php74', 'phpstan']);
