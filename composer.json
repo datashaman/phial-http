@@ -1,30 +1,23 @@
 {
-    "name": "datashaman/phial-project",
-    "description": "Example project for Phial.",
+    "name": "datashaman/phial-http",
+    "description": "HTTP handlers for Phial.",
     "license": "MIT",
     "require": {
-        "async-aws/dynamo-db": "^0.3.1",
-        "circli/event-dispatcher": "^2.2",
         "container-interop/service-provider": "^0.4.0",
         "datashaman/phial-handler": "dev-master",
         "fig/http-message-util": "^1.1",
         "laminas/laminas-diactoros": "^2.3",
-        "latte/latte": "^2.8",
-        "monolog/monolog": "^2.1",
         "narrowspark/http-status": "^4.1",
         "nikic/fast-route": "^1.3",
         "northwoods/broker": "^3.0",
         "northwoods/lazy-middleware": "^2.0",
-        "php-di/invoker": "^2.1",
-        "php-di/php-di": "^6.2",
         "psr/container": "^1.0",
         "psr/event-dispatcher": "^1.0",
         "psr/http-factory": "^1.0",
         "psr/http-message": "^1.0",
         "psr/http-server-handler": "^1.0",
         "psr/http-server-middleware": "^1.0",
-        "psr/log": "^1.1",
-        "psr/simple-cache": "^1.0"
+        "psr/log": "^1.1"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.1"
@@ -35,10 +28,10 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "Datashaman\\Phial\\Http": "src/"
         },
         "files": [
-            "app/helpers.php"
+            "src/helpers.php"
         ]
     },
     "minimum-stability": "dev",
