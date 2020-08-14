@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Datashaman\Phial\Http;
+namespace Datashaman\Phial\Http\Factories;
 
 use Northwoods\Broker\Broker;
 use Northwoods\Middleware\LazyMiddlewareFactory;
