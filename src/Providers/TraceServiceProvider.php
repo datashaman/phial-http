@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Providers;
+namespace Datashaman\Phial\Http\Providers;
 
 use App\Listeners\TraceBegin;
 use App\Listeners\TraceEnd;

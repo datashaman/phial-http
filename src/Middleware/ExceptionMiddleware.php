@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Middleware;
+namespace Datashaman\Phial\Http\Middleware;
 
 use App\Exceptions\HttpException;
 use Fig\Http\Message\StatusCodeInterface;

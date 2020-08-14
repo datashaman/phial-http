@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Listeners;
+namespace Datashaman\Phial\Http\Listeners;
 
 use Datashaman\Phial\Lambda\ContextInterface;
 use Datashaman\Phial\Http\Events\RequestEvent;

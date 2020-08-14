@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Exceptions;
+namespace Datashaman\Phial\Http\Exceptions;
 
 use Exception;
 use Fig\Http\Message\StatusCodeInterface;

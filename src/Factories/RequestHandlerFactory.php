@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\RequestHandlers;
+namespace Datashaman\Phial\Http;
 
 use Northwoods\Broker\Broker;
 use Northwoods\Middleware\LazyMiddlewareFactory;

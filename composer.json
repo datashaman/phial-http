@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Datashaman\\Phial\\Http": "src/"
+            "Datashaman\\Phial\\Http\\": "src/"
         },
         "files": [
             "src/helpers.php"
