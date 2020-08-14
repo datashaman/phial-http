@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Events;
 
-use Datashaman\Phial\Lambda\ContextInterface;
+use Datashaman\Phial\ContextInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class RequestEvent

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http;
 
-use Datashaman\Phial\Lambda\ContextInterface;
-use Datashaman\Phial\Lambda\LambdaHandlerInterface;
+use Datashaman\Phial\ContextInterface;
+use Datashaman\Phial\LambdaHandlerInterface;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Http\Message\ResponseInterface;
