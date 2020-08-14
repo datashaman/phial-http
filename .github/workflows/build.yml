@@ -1,0 +1,22 @@
+---
+name: build
+
+on:
+  - push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: phpstan
+        uses: docker://oskarstark/phpstan-ga
+        with:
+          args: analyse src/ --level=max
+
+      - name: publish
+        uses: wei/curl@master
+        with:
+            args: -X POST -H application/json -d '{"repository":{"url":"https://packagist.org/packages/datashaman/phial-http"}}' "${{ secrets.WEBHOOK_URL }}"
