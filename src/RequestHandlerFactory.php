@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Datashaman\Phial\Factories;
+namespace Datashaman\Phial;
 
 use Datashaman\Phial\ConfigInterface;
 use Northwoods\Broker\Broker;
