@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Middleware;
 
+use Datashaman\Phial\ConfigInterface;
 use Datashaman\Phial\Http\Exceptions\HttpException;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -20,10 +21,10 @@ class ExceptionMiddleware implements MiddlewareInterface, StatusCodeInterface
 
     public function __construct(
         LoggerInterface $logger,
-        bool $debug = false
+        ConfigInterface $config
     ) {
         $this->logger = $logger;
-        $this->debug = $debug;
+        $this->debug = $config->get('app.debug');
     }
 
     public function process(

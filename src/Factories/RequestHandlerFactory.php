@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Datashaman\Phial\Http\Factories;
 
+use Datashaman\Phial\ConfigInterface;
 use Northwoods\Broker\Broker;
 use Northwoods\Middleware\LazyMiddlewareFactory;
 use Psr\Container\ContainerInterface;
@@ -20,15 +21,11 @@ class RequestHandlerFactory implements RequestHandlerFactoryInterface
 
     private ContainerInterface $container;
 
-    /**
-     * @param array<string> $middleware
-     * @psalm-param list<string> $middleware
-     */
     public function __construct(
-        array $middleware,
+        ConfigInterface $config,
         ContainerInterface $container
     ) {
-        $this->middleware = $middleware;
+        $this->middleware = $config->get('http.middleware');
         $this->container = $container;
     }
 
