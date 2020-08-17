@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Datashaman\Phial\Http\Providers;
 
 use Datashaman\Phial\ConfigInterface;
-use Datashaman\Phial\Http\RequestFactory;
-use Datashaman\Phial\Http\RequestFactoryInterface;
+use Datashaman\Phial\Http\RequestHandlerFactory;
+use Datashaman\Phial\Http\RequestHandlerFactoryInterface;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use Interop\Container\ServiceProviderInterface;
@@ -30,8 +30,8 @@ class HttpServiceProvider implements ServiceProviderInterface
                     }
                 );
             },
-            RequestFactoryInterface::class => fn(ContainerInterface $container) =>
-                $container->get(RequestFactory::class),
+            RequestHandlerFactoryInterface::class => fn(ContainerInterface $container) =>
+                $container->get(RequestHandlerFactory::class),
         ];
     }
 
